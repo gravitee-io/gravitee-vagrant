@@ -4,23 +4,25 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "jhcook/centos7"
+  config.vm.box = "bento/centos-7.2"
 
   if ENV['GRAVITEE_VB_MEM']
     memory = ENV["GRAVITEE_VB_MEM"]
   else
-    memory = 2048
+    memory = 4096
   end
 
   config.vm.provider :virtualbox do |vb|
-   vb.name = "vagrant_graviteeio"
+   vb.name = "graviteeio"
    vb.memory = memory
   end
 
-  config.vm.network :forwarded_port, guest: 8000, host: 8000
-  config.vm.network :forwarded_port, guest: 8001, host: 8001
+  config.vm.network :forwarded_port, guest: 80, host: 18080
 
-  config.vm.provision "shell", path: "scripts/env.sh"
-  config.vm.provision "shell", path: "scripts/mongodb.sh"
-  config.vm.provision "shell", path: "scripts/elasticsearch.sh"
+  config.vm.provision "shell", path: "env/env.sh"
+  config.vm.provision "shell", path: "nginx/nginx.sh"
+  config.vm.provision "shell", path: "mongodb/mongodb.sh"
+  config.vm.provision "shell", path: "elasticsearch/elasticsearch.sh"
+  config.vm.provision "shell", path: "tomcat/tomcat.sh"
+  config.vm.provision "shell", path: "gravitee.io/graviteeio.sh"
 end

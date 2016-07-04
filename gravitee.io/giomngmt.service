@@ -1,0 +1,12 @@
+[Unit]
+Description=Gravitee.io Management Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+ExecStart=/home/graviteeio/graviteeio-full-0.15.0/graviteeio-management-api-0.15.0/bin/gravitee
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target

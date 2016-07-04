@@ -1,0 +1,14 @@
+[Unit]
+Description=Gravitee.io Gateway Service
+After=network.target
+
+[Service]
+Type=simple
+User=root
+LimitNOFILE=65536
+Environment="JAVA_OPTS=-Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:MaxPermSize=256m -Xms2048m -Xmx2048m"
+ExecStart=/home/graviteeio/graviteeio-full-0.15.0/graviteeio-gateway-0.15.0/bin/gravitee
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
