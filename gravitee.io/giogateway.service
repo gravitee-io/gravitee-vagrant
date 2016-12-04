@@ -7,7 +7,7 @@ Type=simple
 User=root
 LimitNOFILE=65536
 Environment="JAVA_OPTS=-Dfile.encoding=UTF-8 -XX:+UseConcMarkSweepGC -XX:+CMSClassUnloadingEnabled -XX:+UseParNewGC -XX:MaxPermSize=256m -Xms2048m -Xmx2048m"
-ExecStart=/home/graviteeio/graviteeio-full-1.1.0/graviteeio-gateway-1.1.0/bin/gravitee
+ExecStart=/home/graviteeio/graviteeio-full/graviteeio-gateway/bin/gravitee
 Restart=on-abort
 
 [Install]

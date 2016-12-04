@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TOMCAT_VERSION=8.0.36
+TOMCAT_VERSION=8.0.39
 
 echo "Installing Tomcat version: $TOMCAT_VERSION"
 
