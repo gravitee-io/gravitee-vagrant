@@ -6,7 +6,7 @@ sudo mkdir -p /home/graviteeio
 
 cd /home/graviteeio
 
-wget --progress=bar:force https://dl.bintray.com/gravitee-io/release/$GRAVITEEIO_VERSION/graviteeio-full-$GRAVITEEIO_VERSION.zip
+wget --progress=bar:force https://dist.gravitee.io/$GRAVITEEIO_VERSION/dist/graviteeio-full-$GRAVITEEIO_VERSION.zip
 unzip -o graviteeio-full-$GRAVITEEIO_VERSION.zip -d .
 sudo rm graviteeio-full-$GRAVITEEIO_VERSION.zip
 mv graviteeio-full-$GRAVITEEIO_VERSION graviteeio-full
