@@ -1,6 +1,6 @@
 #!/bin/bash
 
-GRAVITEEIO_VERSION=1.4.0
+GRAVITEEIO_VERSION=1.5.0
 
 sudo mkdir -p /home/graviteeio
 
